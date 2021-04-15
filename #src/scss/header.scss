@@ -1,0 +1,82 @@
+.header {
+	position: relative;
+	margin-top: 51px;
+	height: 84px;
+	background: rgba($color: #000000, $alpha: 0.6);
+	&__elements {
+		display: flex;
+		justify-content: space-between;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	&__element {
+	}
+	&__element_right {
+		display: flex;
+	}
+	&__logo {
+		display: inline-block;
+		margin-top: 18px;
+	}
+
+	&__site-name {
+		margin-top: 22px;
+		display: inline-block;
+		font-family: Nokia-Sans-S60;
+		font-size: 26px;
+		text-transform: uppercase;
+		letter-spacing: 0.075em;
+		color: #ffffff;
+	}
+
+	&__official {
+		margin-top: 6px;
+		opacity: 0.5;
+		font-family: Roboto;
+		font-size: 13px;
+		font-weight: 100;
+		color: #ffffff;
+	}
+
+	&__contacts {
+		margin-right: 30px;
+	}
+
+	&__contact-text {
+		text-align: right;
+		margin-top: 23px;
+		font-family: Roboto;
+		font-size: 12px;
+		font-weight: 300;
+		color: #ffffff;
+	}
+
+	&__contact-number {
+		display: inline-block;
+		margin-top: 8px;
+		font-family: Roboto;
+		font-size: 22px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+	&__button {
+		margin-top: 16px;
+		width: 178px;
+		height: 52px;
+		background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+		border-radius: 4px;
+		box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+		font-family: Roboto;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+}
+.container {
+}
+.button {
+}
