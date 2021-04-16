@@ -1,6 +1,9 @@
 .header {
-	position: relative;
-	margin-top: 51px;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 51px;
 	height: 84px;
 	background: rgba($color: #000000, $alpha: 0.6);
 	&__elements {
@@ -55,7 +58,6 @@
 	&__contact-number {
 		display: inline-block;
 		margin-top: 8px;
-		font-family: Roboto;
 		font-size: 22px;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -66,14 +68,7 @@
 		margin-top: 16px;
 		width: 178px;
 		height: 52px;
-		background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
-		border-radius: 4px;
-		box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
-		font-family: Roboto;
-		font-size: 14px;
-		font-weight: 400;
-		text-transform: uppercase;
-		color: #ffffff;
+		
 	}
 }
 .container {

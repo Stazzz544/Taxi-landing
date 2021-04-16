@@ -1,8 +1,13 @@
 @import "mixins";
+@import "lib/swiper-bundle";
 @import "fonts";
 @import "reset";
 @import "variables";
 @import "#general";
-@import "navigation";
-@import "header.scss";
 
+@import "blocks/menu";
+@import "blocks/header";
+@import "blocks/s1_invite";
+@import "blocks/s2_mobile";
+@import "blocks/s3_advantages";
+@import "blocks/s4_uppertunity";

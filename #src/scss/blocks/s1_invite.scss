@@ -1,0 +1,49 @@
+.invite {
+	padding-top: 200px;
+	padding-bottom: 132px;
+	position: relative;
+		&__title {
+			
+			font-size: 60px;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: #ffffff;
+			text-align: center;
+		}
+
+		&__subtitle {
+			margin-top: 22px;
+			text-transform: uppercase;
+			color: #ffffff;
+			font-size: 36px;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		&__text {
+			margin-top: 23px;
+			font-family: Roboto;
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: 400;
+			color: #ffffff;
+			text-align: center;
+			&:last-of-type{
+				margin-top: 37px;
+			}
+		}
+
+		&__button {
+			margin: 0 auto;
+			margin-top: 115px;
+			width: 265px;
+			height: 69px;
+			box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+			font-size: 18px;
+			line-height: 68px;
+			text-transform: uppercase;
+			color: #ffffff;
+			text-align: center;
+		}
+}
+

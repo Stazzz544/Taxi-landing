@@ -1,0 +1,52 @@
+.uppertunity {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	&__top {
+		padding: 57px 0px 0px 0px;
+		background-color: #070716;
+		flex: 0 0 50%
+	}
+
+	&__title {
+		color: #ffffff;
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+		color: #ffffff;
+	}
+
+	&__under-text {
+		margin-top: 19px;
+		color: #ffffff;
+	}
+
+	&__bottom {
+		padding: 0px 0px 138px 0px;
+		background-color: pink;
+		flex: 0 0 50%
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 17px;
+		font-weight: 300;
+		color: #222222;
+	}
+}
+
+
+
+.swiper-container-uppertunity {
+	overflow: hidden;
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-next {
+}
+.swiper-button-prev {
+}
