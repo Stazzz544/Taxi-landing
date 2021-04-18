@@ -1,0 +1,69 @@
+/*!
+ * jQuery Tabs - jQuery plugin to create simple vertical and horizontal tabs
+ * Copyright 2017 - Anantajit JG
+ * https://github.com/anantajitjg/jquery-tabs
+ */
+
+@import 'variables';
+@import 'mixins';
+// main wrapper
+#{$mainWrapper} {
+    @include box-sizing(border-box);
+    @include display-flex;
+    width: 100%;
+    padding: $mainPadding;
+    &.horizontal-tab {
+        @include flex-direction(column);
+    }
+}
+
+// default: vertical tab menu
+#{$tabMenu} {
+    @include flex(1);
+    #{$tab} {
+        background: $tabBgColor;
+        border-bottom: $tabBorder;
+        cursor: pointer;
+        padding: $tabTitlePadding;
+        @include transition(background 0.2s); // target first child
+        &:first-child {
+            border-top: $tabBorder;
+        } // hover or when tab is active
+        &:hover,
+        &.active {
+            background: $activeTabBgColor;
+            border-left: $activeTabBorder;
+        }
+    }
+}
+
+// horizontal tab menu
+.horizontal-tab #{$tabMenu} {
+    @include display-inline-flex;
+    #{$tab} {
+        border-bottom: none;
+        border-right: $tabBorder;
+        border-left: none; // target first child
+        &:first-child {
+            border-left: $tabBorder;
+            border-top: none;
+        } // hover or when tab is active
+        &:hover,
+        &.active {
+            border-bottom: $activeTabBorder;
+        }
+    }
+}
+
+// tab content wrapper
+#{$contentWrapper} {
+    @include flex(4);
+}
+
+// tab content
+#{$tabContent} {
+    display: none;
+    &.active {
+        display: flex;
+    }
+}

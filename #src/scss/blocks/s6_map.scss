@@ -1,0 +1,51 @@
+.map {
+	padding: 50px 0;
+	min-height: calc(100vh - 50px);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	&__background-image{
+		z-index: -1;
+	}
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	&__title {
+		
+		color: #ffffff;
+		border: #ffffff 1px solid;
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+		color: #ffffff;
+	}
+
+	&__undertext {
+		text-align: center;
+		margin-top: 20px;
+		color: #ffffff;
+		font-size: 17px;
+		flex-grow: 1;
+	}
+	&__img{
+		max-width: 1440px;
+	}
+	&__all-cities {
+		text-align: center;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #1fbad6;
+		cursor: pointer;
+		&:hover{
+			transform: translateY(-3px);
+			color: #ffffff;
+			transition: all 0.3s;
+		}
+	}
+}
+
+

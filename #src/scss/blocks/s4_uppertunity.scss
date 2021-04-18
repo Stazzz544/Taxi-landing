@@ -1,16 +1,66 @@
 .uppertunity {
-	min-height: 100vh;
+	height: 900px;;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	&__swiper-button-next{
+		right: 23%;
+		width: 60px;
+		height: 90px;
+		top: 48.5%;
 
+		&::after{
+			content: "";
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: 10;
+			-webkit-mask: url('../../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
+			mask: url('../../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
+			background-color: rgba(2, 2, 8, 0.591);
+			transition: all 0.4s;
+		}
+		&:hover::after{
+			background-color: rgb(255, 21, 21);
+			transition: all 0.4s;
+		}
+	}
+	&__swiper-button-prev{
+		left: 23%;
+		width: 60px;
+		height: 90px;
+		top: 48.5%;
+
+		&::after{
+			content: "";
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: 10;
+			-webkit-mask: url('../../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
+			mask: url('../../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
+			background-color: rgba(2, 2, 8, 0.591);
+			transition: all 0.4s;
+		}
+		&:hover::after{
+			background-color: rgb(255, 21, 21);
+			transition: all 0.4s;
+		}
+	}
 	&__top {
 		padding: 57px 0px 0px 0px;
-		background-color: #070716;
-		flex: 0 0 50%
+		background: -webkit-linear-gradient(0deg, rgb(30, 172, 199) 2%, rgb(255, 255, 255) 100%);
+		background: -moz-linear-gradient(0deg, rgb(30, 172, 199) 2%, rgb(255, 255, 255) 100%);
+		background: linear-gradient(0deg, rgb(30, 172, 199) 2%, rgb(255, 255, 255) 100%);
+		flex: 1 1 50%;
 	}
 
 	&__title {
-		color: #ffffff;
+		color: #000000;
 	}
 
 	&__subtitle {
@@ -24,29 +74,44 @@
 	}
 
 	&__bottom {
-		padding: 0px 0px 138px 0px;
-		background-color: pink;
-		flex: 0 0 50%
+		padding: 0px 0px 135px 0px;
+		background: -webkit-linear-gradient(180deg, rgb(30, 34, 34), rgb(255, 255, 255) 90%);
+		background: -moz-linear-gradient(180deg, rgb(30, 34, 34), rgb(255, 255, 255) 90%);
+		background: linear-gradient(180deg, rgb(30, 34, 34), rgb(255, 255, 255) 90%);
+		flex: 1 1 50%;
+		position: relative
 	}
 
 	&__text {
+		position: absolute;
 		text-align: center;
-		font-size: 17px;
+		font-size: 25px;
 		font-weight: 300;
 		color: #222222;
+		top: 40%;
+		left: 0;
+		right: 0;
+		
 	}
 }
 
-
+.swiper-uppertunity-wraper{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .swiper-container-uppertunity {
 	overflow: hidden;
-}
-.swiper-wrapper {
+	margin-bottom: 45px;
+	
 }
 .swiper-slide {
-}
-.swiper-button-next {
-}
-.swiper-button-prev {
+	text-align: center;
+	img{
+		width: 40%;
+	}
 }

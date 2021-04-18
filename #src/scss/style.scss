@@ -1,9 +1,13 @@
 @import "mixins";
-@import "lib/swiper-bundle";
 @import "fonts";
 @import "reset";
 @import "variables";
 @import "#general";
+
+@import "lib/swiper-bundle";
+@import "lib/variables";
+@import "lib/jquery.tabs";
+@import "lib/variables";
 
 @import "blocks/menu";
 @import "blocks/header";
@@ -11,3 +15,6 @@
 @import "blocks/s2_mobile";
 @import "blocks/s3_advantages";
 @import "blocks/s4_uppertunity";
+@import "blocks/s5_requirement";
+@import "blocks/s6_map";
+@import "blocks/footer";
