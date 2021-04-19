@@ -115,3 +115,9 @@
 		width: 40%;
 	}
 }
+
+@media(max-width:1024px){
+	.swiper-container-mobile>.swiper-slide>img{
+		width: 60%;
+	}
+}
