@@ -30,7 +30,10 @@
 			font-size: 15px;
 			font-weight: 300;
 			color: #ffffff;
-			
+			&:hover{
+				color: #51defa;
+				transition: all 0.6s;
+			}
 		}
 }
 

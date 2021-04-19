@@ -47,8 +47,19 @@
 		}
 }
 
+@media(max-width:680px){
+	.invite{
+		&__title{
+			margin-top: 20px;
+		}
+	}
+}
+
 @media(max-width:390px){
 	.invite{
 		padding-top: 290px;
+		&__title{
+			font-size: 46px;
+		}
 	}
 }

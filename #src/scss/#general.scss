@@ -1,15 +1,18 @@
-
-.global-wrapper{
+body.lock {
 	overflow: hidden;
 }
 
-.container{
-	max-width: 1120px;
-	padding: 0px 10px;
-	margin: 0 auto;
+.global-wrapper {
+	overflow: hidden;
 }
 
-*{
+.container {
+	max-width: 1120px;
+	padding  : 0px 10px;
+	margin   : 0 auto;
+}
+
+* {
 	font-family: Roboto;
 	font-weight: 400;
 }
@@ -17,185 +20,330 @@
 //bg
 .background-image {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	display: flex;
-	z-index: -1;
+	width   : 100%;
+	height  : 100%;
+	top     : 0;
+	left    : 0;
+	display : flex;
+	z-index : -1;
+
 	&__flex-element {
-		flex: 0 0 100%;
+		flex    : 0 0 100%;
 		position: relative;
 	}
-	&__flex-element_substrape {//подложка
-		&::after{
-			content:"";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-			background: rgba($color: #000000, $alpha: 0.2)
+
+	&__flex-element_substrape {
+
+		//подложка
+		&::after {
+			content   : "";
+			position  : absolute;
+			width     : 100%;
+			height    : 100%;
+			top       : 0;
+			right     : 0;
+			left      : 0;
+			bottom    : 0;
+			background: rgba($color: #000000, $alpha: 0.5)
 		}
 	}
-	&__img {
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
 
-		}
+	&__img {
+		width     : 100%;
+		height    : 100%;
+		top       : 0;
+		left      : 0;
+		object-fit: cover;
+		position  : absolute;
+		top       : 0;
+		left      : 0;
+
+	}
 }
 
 //button
-.button{
+.button {
 	background-image: linear-gradient(0.0deg, $main-color 0%, #4ce2ff 100%);
-	border-radius: 4px;
-	box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #ffffff;
+	border-radius   : 36px;
+	box-shadow      : 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
+	font-size       : 14px;
+	text-transform  : uppercase;
+	color           : #ffffff;
+	cursor          : pointer;
+	transition      : all 0.5s;
+
+	&:hover {
+		transform : translateY(-5px);
+		transition: all 0.5s;
+	}
 }
 
 //title
-.title{
-	margin: 0 auto;
-	font-size: 22px;
+.title {
+	margin        : 0 auto;
+	font-size     : 22px;
 	text-transform: uppercase;
-	border: 1px solid #000000;
-	text-align: center;
-	width: 220px;
-	padding: 10px 0px;
-	border-radius: 25px;
+	border        : 1px solid #000000;
+	text-align    : center;
+	width         : 220px;
+	padding       : 10px 0px;
+	border-radius : 25px;
 
 }
 
-.subtitle{
-	text-align: center;
-	font-size: 38px;
-	font-weight: 700;
+.subtitle {
+	text-align    : center;
+	font-size     : 38px;
+	font-weight   : 700;
 	text-transform: uppercase;
-	color: #222222;
+	color         : #222222;
 }
 
-.under-text{
-	font-size: 17px;
+.under-text {
+	font-size  : 17px;
 	font-weight: 400;
-	color: #222222;
-	text-align: center;
+	color      : #222222;
+	text-align : center;
 }
+
 //swiper
 
 .swiper-container {
-	width: 100%;
-	padding-top: 50px;
+	width         : 100%;
+	padding-top   : 50px;
 	padding-bottom: 50px;
- }
+}
 
- .swiper-slide {
+.swiper-slide {
 	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 100%;
-	max-height: 600px;
+	background-size    : contain;
+	background-repeat  : no-repeat;
+	width              : 100%;
+	max-height         : 600px;
 	// height: 100%;
 
- }
+}
 
 
- .swiper-pagination-bullets{
-	display: flex;
-	align-items: center;
+.swiper-pagination-bullets {
+	display        : flex;
+	align-items    : center;
 	justify-content: center;
 
- }
+}
 
- .swiper-pagination-bullets{
- }
- .swiper-pagination-bullets>.swiper-pagination-bullet{
+.swiper-pagination-bullets {}
+
+.swiper-pagination-bullets>.swiper-pagination-bullet {
 	background-color: rgb(255, 162, 40);
-	opacity: 1;
- }
+	opacity         : 1;
+}
 
- .swiper-pagination-bullets>.swiper-pagination-bullet-active{
+.swiper-pagination-bullets>.swiper-pagination-bullet-active {
 	background: url("../img/icon/car.png") 0 0/contain no-repeat;
-	height: 37px;
-	width: 37px;
- }
+	height    : 37px;
+	width     : 37px;
+}
 
 //sidebar
 
- .sidebar {
+.sidebar {
 	// display: flex;
 	// justify-content: space-around;
 	flex-direction: column;
-	padding: 7% 0 3% 20px;
-	height: 100%;
-	width: 40%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	z-index: 300;
-	position: fixed;
-	top: 0;
-	left: 0;
-	border-right: 1px solid rgb(174, 171, 171); 
-	transform: translateX(-110%);
-	background: #ffffff;
-	transition: all 0.7s;
-	&_active{
-		transform: translateX(0%);
+	padding       : 7% 0 3% 20px;
+	height        : 100%;
+	width         : 40%;
+	overflow-x    : hidden;
+	overflow-y    : auto;
+	z-index       : 300;
+	position      : fixed;
+	top           : 0;
+	left          : 0;
+	border-right  : 1px solid rgb(174, 171, 171);
+	transform     : translateX(-110%);
+	background    : #ffffff;
+	transition    : all 0.7s;
+
+	&_active {
+		transform : translateX(0%);
 		transition: all 0.7s;
 	}
-	&__close{
-		cursor: pointer;
-		position: absolute;
-		right: 31px;
-		top: 77px;
-		color: red;
-		font-size: 27px	
+
+	&__close {
+		cursor   : pointer;
+		position : absolute;
+		right    : 31px;
+		top      : 77px;
+		color    : red;
+		font-size: 27px
 	}
 
 	&__item {
-		text-align: left;
-		font-size: 23px;
-		font-weight: 400;
+		text-align    : left;
+		font-size     : 23px;
+		font-weight   : 400;
 		text-transform: uppercase;
-		position: relative;
-		a{
+		position      : relative;
+
+		a {
 			color: inherit;
 		}
-		&:hover{
-			color: $main-color;
-			transform: translateX(20px);
+
+		&:hover {
+			color     : $main-color;
+			transform : translateX(20px);
 			transition: all 0.5s;
 
 		}
-		&::after{
-			content:"";
-			position: absolute;
-			width: 80%;
-			height: 1px;
+
+		&::after {
+			content   : "";
+			position  : absolute;
+			width     : 80%;
+			height    : 1px;
 			background: rgb(174, 171, 171);
-			bottom: -40%;
-			left: 0;
+			bottom    : -40%;
+			left      : 0;
 		}
 
-		&-choice{
-			color: $main-color;
+		&-choice {
+			color      : $main-color;
 			font-weight: 900;
-			font-size: 27px;
-			text-align: center;
+			font-size  : 27px;
+			text-align : center;
 		}
-		&-city{
+
+		&-city {
 			margin-top: 20px;
 
 		}
 	}
 
+}
+
+//mail modal
+
+.overlay {
+	;
+	position       : fixed;
+	top            : 0;
+	left           : 0;
+	bottom         : 0;
+	right          : 0;
+	background     : #000000ad;
+	z-index        : 10000;
+	display        : none; //!
+	justify-content: center;
+	align-items    : center;
+
+	&_active {
+		display: flex;
+	}
+}
+
+.modal {
+	padding      : 30px;
+	width        : 310px;
+	height       : 400px;
+	background   : $main-color;
+	position     : relative;
+	border-radius: 10px;
+	&-send-success{
+		height: 110px;
+		padding-top: 45px;
+	}
+
+	&__close {
+		position : absolute;
+		color    : #ffffff;
+		font-size: 52px;
+		top      : -3px;
+		right    : 13px;
+
+	}
+
+	&__subtitle {
+		font-size : 25px;
+		color     : #ffffff;
+		text-align: center;
+	}
+
+	&__descr {
+		margin-top: 25px;
+		font-size : 15px;
+		color     : #ffffff;
+	}
+}
+
+.feed-form {
+	input {
+		width        : 100%;
+		margin-top   : 20px;
+		padding      : 9px 16px;
+		border-radius: 15px;
+
+		&:first-child {
+			margin-top: 40px;
+		}
+	}
+}
+
+.button {
+	&_submit {
+		margin    : 0 auto;
+		margin-top: 30px;
+		padding   : 10px 40px;
+		display   : block;
+
+	}
+}
+
+
+
+
+
+
+
+
+@media(max-width:900px) {
+	.sidebar {
+		width: 50%;
+
+		&__item-choice {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media(max-width:630px) {
+	.sidebar {
+		&__item-choice {
+			margin-top: 50px;
+			text-align: left;
+		}
+	}
+}
+
+@media(max-width:520px) {
+	.sidebar {
+		width: 70%;
+	}
+}
+
+
+@media(max-width:390px) {
+	.subtitle {
+		font-size: 24px;
+	}
+
+	.sidebar {
+		&__item-choice {
+			font-size: 23px;
+		}
+
+		&__item a {
+			font-size: 18px;
+		}
+	}
 }

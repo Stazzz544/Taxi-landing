@@ -38,7 +38,7 @@
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a href="#" class="menu__link">Оставить заявку</a>
+					<a href="#" class="menu__link modal-activator3">Оставить заявку</a>
 				</li>
 			</ul>
 		</nav>
@@ -56,7 +56,7 @@
 							<div class="header__contact-text">Звоните нам ежедневно</div>
 							<a href="tel:+74957970988" class="header__contact-number">8 495 797 09 88</a>
 						</div>
-						<button class="header__button button">заказать звонок</button>
+						<button class="header__button button modal-activator1">заказать звонок</button>
 					</div>
 				</div>
 			</div>
@@ -79,7 +79,7 @@
 					<p class="invite__text">Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе
 						Москве. Водители у нас
 						зарабатывают от 80000- 120000 в месяц.</p>
-					<div class="invite__button button">ОТПРАВИТЬ ЗАЯВКУ!</div>
+					<div class="invite__button button modal-activator2">ОТПРАВИТЬ ЗАЯВКУ!</div>
 				</div>
 			</section>
 
@@ -92,9 +92,9 @@
 						мобильный телефон</h4>
 					<!-- Swiper -->
 					<div class="mobile-container">
-						<div class="swiper-container-mobile">
+						<div class="swiper-container-mobile swiper-slide_mobile">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide" style="background-image:url(img/slider/1.jpg)"></div>
+								<div class="swiper-slide " style="background-image:url(img/slider/1.jpg)"></div>
 								<div class="swiper-slide" style="background-image:url(img/slider/2.jpg)"></div>
 								<div class="swiper-slide" style="background-image:url(img/slider/3.png)"></div>
 								<div class="swiper-slide" style="background-image:url(img/slider/4.jpg)"></div>
@@ -224,19 +224,19 @@
 					<div class="swiper-container-uppertunity">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="img/slider/car1.png" alt="">
+								<img class="uppertunity__img-size" src="img/slider/car1.png" alt="">
 							</div>
 							<div class="swiper-slide">
-								<img src="img/slider/car5.png" alt="">
+								<img class="uppertunity__img-size"  src="img/slider/car5.png" alt="">
 							</div>
 							<div class="swiper-slide">
-								<img src="img/slider/car3.png" alt="">
+								<img class="uppertunity__img-size"  src="img/slider/car3.png" alt="">
 							</div>
 							<div class="swiper-slide">
-								<img src="img/slider/car4.png" alt="">
+								<img class="uppertunity__img-size"  src="img/slider/car4.png" alt="">
 							</div>
 							<div class="swiper-slide">
-								<img src="img/slider/car2.png" alt="">
+								<img class="uppertunity__img-size"  src="img/slider/car2.png" alt="">
 							</div>
 						</div>
 						<div class=" uppertunity__swiper-button-next swiper-button-next"></div>
@@ -429,8 +429,29 @@
 					</li>
 				<li class="sidebar__item sidebar__item-city"><a href="#">Владивосток</a>
 					</li>
-					
 			</ul>
+
+			<div class="overlay">
+				<div class="modal" id="mail-form">
+					<div class="modal__close">&times;</div>
+					<div class="modal__subtitle">Просто заполните форму заявки</div>
+					<div class="modal__descr">и мы перезвоним вам в течении 10 минут...</div>
+					<form class="feed-form " action="#">
+						<input name="name" placeholder="Ваше имя" type="text" required>
+						<input name="phone" placeholder="Ваш телефон" required>
+						<input name="email" placeholder="Ваш E-mail" type="email" required>
+						<button class="button button_submit" type="submit">отправить</button>
+					</form>
+				</div>
+			</div>
+			
+			<div class="overlay">
+				<div class="modal modal-send-success" id="">
+					<div class="modal__close">&times;</div>
+					<div class="modal__subtitle">Письмо отправлено! </div>
+			</div>
+
+
 	</div>
 
 	<script src="js/script.min.js"></script>

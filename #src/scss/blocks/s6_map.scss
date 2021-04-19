@@ -36,12 +36,15 @@
 	}
 	&__all-cities {
 		text-align: center;
-		font-size: 15px;
+		font-size: 20px;
 		text-transform: uppercase;
 		color: #1fbad6;
 		cursor: pointer;
+		border: 1px solid $main-color;
+		padding: 10px;
+
 		&:hover{
-			transform: translateY(-3px);
+			transform: translateY(-7px);
 			color: #ffffff;
 			transition: all 0.3s;
 		}

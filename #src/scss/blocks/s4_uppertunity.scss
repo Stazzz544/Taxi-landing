@@ -117,7 +117,38 @@
 }
 
 @media(max-width:1024px){
-	.swiper-container-mobile>.swiper-slide>img{
+	.swiper-slide .uppertunity__img-size{
 		width: 60%;
+	}
+	.uppertunity{
+		&__swiper-button-next{
+			right: 10%;
+			&:hover::after{
+				background-color: rgba(2, 2, 8, 0.591);
+			}
+		}
+		&__swiper-button-prev{
+			left: 10%;
+			&:hover::after{
+				background-color: rgba(2, 2, 8, 0.591);
+			}
+		}
+		&__bottom{
+			padding: 0 0 0 0;
+		}
+	}
+}
+
+@media(max-width:500px){
+	.swiper-slide .uppertunity__img-size{
+		width: 65%;
+	}
+	.uppertunity{
+		&__swiper-button-next{
+			right: 1%;
+		}
+		&__swiper-button-prev{
+			left: 1%;
+		}
 	}
 }
