@@ -1,8 +1,43 @@
-body.lock {
-	overflow: hidden;
+html{
+	scroll-behavior: smooth;
 }
 
-.global-wrapper {
+body.lock {
+	overflow: hidden;
+	
+}
+
+.arrow-up{
+	display: none;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	z-index: 900;
+	right: 60px;
+	bottom: 60px;
+	animation: arrow 2s infinite; 
+		&__img{
+			mask: url("../img/icon/arrow-up.svg");
+			background-color: $main-color;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+}
+
+@keyframes arrow {
+	0% {
+	  bottom: 60px;
+	}
+	50% {
+		bottom: 68px;
+	}
+	100% {
+		bottom: 60px;
+	}
+}
+
+.global-wrapper { 
 	overflow: hidden;
 }
 
@@ -65,12 +100,12 @@ body.lock {
 .button {
 	background-image: linear-gradient(0.0deg, $main-color 0%, #4ce2ff 100%);
 	border-radius   : 36px;
-	box-shadow      : 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
 	font-size       : 14px;
 	text-transform  : uppercase;
 	color           : #ffffff;
 	cursor          : pointer;
 	transition      : all 0.5s;
+	
 
 	&:hover {
 		transform : translateY(-5px);
@@ -120,7 +155,6 @@ body.lock {
 	background-repeat  : no-repeat;
 	width              : 100%;
 	max-height         : 600px;
-	// height: 100%;
 
 }
 
@@ -148,8 +182,6 @@ body.lock {
 //sidebar
 
 .sidebar {
-	// display: flex;
-	// justify-content: space-around;
 	flex-direction: column;
 	padding       : 7% 0 3% 20px;
 	height        : 100%;
@@ -261,6 +293,9 @@ body.lock {
 @media(max-width:520px) {
 	.sidebar {
 		width: 70%;
+	}
+	.arrow-up{
+		right: 20px;
 	}
 }
 

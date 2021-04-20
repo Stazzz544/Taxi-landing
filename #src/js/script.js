@@ -1,11 +1,8 @@
 @@include('swiper-bundle.min.js');
 @@include('jquery-1.11.0.min.js');
-@@include('jquery-migrate-1.2.1.min.js');
-// @@include('jquery-1.12.4.min.js');
 @@include('jquery.tabs.js');
-@@include('jquery.validate.min.js');
 @@include('jquery.maskedinput.min.js');
-
+@@include('wow.min.js');
 
 //функция для подключения webp
 function testWebP(callback) {
@@ -38,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 })
 
+new WOW().init();
 
 //sidebar
 
@@ -56,38 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	})
 })
 
-//modal
-
-// window.addEventListener('DOMContentLoaded', () => {
-// 	const modal = document.querySelector('.overlay');
-// 	const bodyLock = document.querySelector('body');
-	
-// 	modalActivator1 = document.querySelector('.modal-activator1');
-// 	modalActivator2 = document.querySelector('.modal-activator2');
-// 	modalActivator3 = document.querySelector('.modal-activator3');
-// 	modalRemover = document.querySelector('.modal__close');
-
-
-// 	modalActivator1.addEventListener('click', () => {
-// 		modal.classList.toggle('overlay_active');
-// 		bodyLock.classList.toggle('lock');
-// 	}),
-// 	modalActivator2.addEventListener('click', () => {
-// 		modal.classList.toggle('overlay_active');
-// 		bodyLock.classList.toggle('lock');
-// 	}),
-// 	modalActivator3.addEventListener('click', () => {
-// 		modal.classList.toggle('overlay_active');
-// 		bodyLock.classList.toggle('lock');
-// 	}),
-
-// 	modalRemover.addEventListener('click', () => {
-// 		modal.classList.remove('overlay_active');
-// 		bodyLock.classList.remove('lock');
-// 	});
-
-
-// })
 
 
 
@@ -97,10 +63,10 @@ var swiperMobile = new Swiper('.swiper-container-mobile', {
 	centeredSlides: true,
 	loop: true,
 	slidesPerView: 'auto',
-	// autoplay: {
-	// 	delay: 2500,
-	// 	disableOnInteraction: false,
-	//  },
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	 },
 	coverflowEffect: {
 		rotate: 50,
 		stretch: 0,
@@ -118,10 +84,10 @@ var swiperUppertunity = new Swiper('.swiper-container-uppertunity', {
 	spaceBetween: 30,
 	loop: true,
 	centeredSlides: true,
-	// autoplay: {
-	//   delay: 2500,
-	//   disableOnInteraction: false,
-	// },
+	autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -129,12 +95,17 @@ var swiperUppertunity = new Swiper('.swiper-container-uppertunity', {
 });
 
 
-
-
-
-
-
 $(document).ready(function(){
+//appear arrow
+//pageup
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1600) {
+			$('.arrow-up').fadeIn();
+		} else {
+			$('.arrow-up').fadeOut();
+		}
+	});
+
 
 //tabs
 
@@ -144,6 +115,7 @@ $(document).ready(function(){
 
 
 //modal
+
 	$('[data-modal=consultation]').on('click', function(){
 		$('.overlay, #consultation').fadeIn('slow');
 	}); 
@@ -158,8 +130,11 @@ $(document).ready(function(){
 		})
 	})
 
+//validation
 
 	$('input[name=phone]').mask("+7 (999) 999-99-99");
+
+//php mailer
 
 	$('form').submit(function(e) {
 		e.preventDefault();

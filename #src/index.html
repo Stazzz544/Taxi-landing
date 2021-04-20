@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" type="image/icon" href="img/favicon/favicon-32x32.png">
 	<title>Taxi</title>
+	
 </head>
 
 <body>
@@ -21,38 +23,38 @@
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a href="#" class="menu__link">Со своим автомобилем</a>
+					<a href="#requirement" class="menu__link">Со своим автомобилем</a>
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a href="#" class="menu__link">На автомобиле компании</a>
+					<a href="#requirement" class="menu__link">На автомобиле компании</a>
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a href="#" class="menu__link">Требования</a>
+					<a href="#requirement" class="menu__link">Требования</a>
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a href="#" class="menu__link">Контакты</a>
+					<a href="#map" class="menu__link">Контакты</a>
 				</li>
 				<li class="menu__item-border"></li>
 				<li class="menu__item">
-					<a data-modal='consultation' href="#" class="menu__link modal-activator3">Оставить заявку</a>
+					<div data-modal='consultation'class="menu__link modal-activator3">Оставить заявку</div>
 				</li>
 			</ul>
 		</nav>
-		<header class="header">
+		<header class="header wow animate__animated animate__fadeInLeftBig" data-wow-delay="2s" >
 			<div class="container">
 				<div class="header__elements">
 					<div class="header__element">
 						<img class="header__logo" src="img/logo/logo.png" alt="logo">
-						<span class="header__site-name">uber777.moscow</span>
-						<h4 class="header__official">Официальный партнер Uber в Москве</h4>
+						<span class="header__site-name">TAX-ON.SPB</span>
+						<h4 class="header__official">Официальный партнер TAX-ON в Москве</h4>
 					</div>
 					<div class="header__element header__element_right">
 						<div class="header__contacts">
 							<div class="header__contact-text">Звоните нам ежедневно</div>
-							<a href="tel:+74957970988" class="header__contact-number">8 495 797 09 88</a>
+							<a href="tel:+78122222222" class="header__contact-number">8 812 222 22 22</a>
 						</div>
 						<button data-modal='consultation' class="header__button button modal-activator1">заказать звонок</button>
 					</div>
@@ -60,16 +62,16 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="invite">
+			<section class="invite" id="invite">
 				<div class="background-image">
 					<div class="background-image__flex-element background-image__flex-element_substrape">
 						<img class="background-image__img" src="img/background/main_bg.jpg" alt="">
 					</div>
 				</div>
 				<div class="container">
-					<h1 class="invite__title">КОМПАНИЯ UBER PARTNERS!</h1>
+					<h1 class="invite__title">КОМПАНИЯ TAX-ON PARTNERS!</h1>
 					<h2 class="invite__subtitle">ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</h2>
-					<p class="invite__text">Компания UBER динамически развивающаяся. Компания на рынке занимает лидирующее
+					<p class="invite__text">Компания TAX-ON динамически развивающаяся. Компания на рынке занимает лидирующее
 						место среди
 						таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в
 						личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы за
@@ -77,11 +79,11 @@
 					<p class="invite__text">Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе
 						Москве. Водители у нас
 						зарабатывают от 80000- 120000 в месяц.</p>
-					<div data-modal='consultation' class="invite__button button modal-activator2">ОТПРАВИТЬ ЗАЯВКУ!</div>
+					<div data-modal='consultation' class="invite__button button wow animate__animated animate__pulse" data-wow-duration="3s" data-wow-iteration="infinite">ОТПРАВИТЬ ЗАЯВКУ!</div>
 				</div>
 			</section>
 
-			<section class="mobile">
+			<section class="mobile" id="mobile">
 				<div class="container">
 					<h2 class="mobile__title title">Возможности</h2>
 					<h3 class="mobile__subtitle subtitle">мобильное приложение убер</h3>
@@ -106,12 +108,12 @@
 				</div>
 			</section>
 
-			<section class="advantages">
+			<section class="advantages" id="advantages">
 				<div class="container">
 					<h2 class="advantages__title title">преимущества</h2>
 					<h3 class="advantages__subtitle subtitle">8 причин начать работать с нами</h3>
 					<div class="advantages__flex-container">
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInLeftBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/1.png" alt="" class="flex-item__image">
 							</div>
@@ -124,7 +126,7 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInRightBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/2.png" alt="" class="flex-item__image">
 							</div>
@@ -136,7 +138,7 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInLeftBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/3.png" alt="" class="flex-item__image">
 							</div>
@@ -149,7 +151,7 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInRightBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/4.png" alt="" class="flex-item__image">
 							</div>
@@ -162,7 +164,7 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInLeftBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/5.png" alt="" class="flex-item__image">
 							</div>
@@ -175,7 +177,7 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInRightBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/6.png" alt="" class="flex-item__image">
 							</div>
@@ -187,18 +189,18 @@
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInLeftBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/7.png" alt="" class="flex-item__image">
 							</div>
 							<div class="flex-item__content">
 								<h3 class="flex-item__title">Круглосуточная поддержка</h3>
-								<p class="flex-item__text">В Uber действует круглосуточная поддержка водителей по электронной
+								<p class="flex-item__text">В TAX-ON действует круглосуточная поддержка водителей по электронной
 									почте. Если что-то непонятно, Вы всегда можете задать вопрос через On-line консультацию.</p>
 							</div>
 						</div>
 
-						<div class="flex-item">
+						<div class="flex-item wow animate__animated animate__fadeInRightBig" data-wow-delay="0.6s">
 							<div class="flex-item__img">
 								<img src="img/icon/8.png" alt="" class="flex-item__image">
 							</div>
@@ -213,7 +215,7 @@
 				</div>
 			</section>
 
-			<section class="uppertunity">
+			<section class="uppertunity" id="uppertunity">
 
 
 				<div class="swiper-uppertunity-wraper">
@@ -261,7 +263,7 @@
 				</div>
 			</section>
 
-			<section class="requirement">
+			<section class="requirement" id="requirement">
 
 				<div class="container">
 					<h2 class="requirement__title title">возможности</h2>
@@ -271,12 +273,13 @@
 							<div class="requirement__tab jq-tab-title active button" data-tab="1">УСЛОВИЯ: со своим авто</div>
 							<div class="requirement__tab jq-tab-title button" data-tab="2">УСЛОВИЯ: на авто компании</div>
 						</div>
-						<div class="jq-tab-content-wrapper">
+						
+						<div class="jq-tab-content-wrapper wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
 							<div class="requirement__tab-content car jq-tab-content active" data-tab="1">
 								<div class="requirement__ul-wrapper">
 									<ul class="requirement__list pluses">
 										<li class=" requirement__item-title plus">Преимущества</li>
-										<li class="requirement__item plus">Подключаем к системе UBER под 10%.</li>
+										<li class="requirement__item plus">Подключаем к системе TAX-ON под 10%.</li>
 										<li class="requirement__item plus">Ни каких взносов 0%!</li>
 										<li class="requirement__item plus">Можем подключать удаленно без приезда в офис</li>
 										<li class="requirement__item plus">ИП не требуется</li>
@@ -352,9 +355,9 @@
 
 			</section>
 
-			<section class="map">
+			<section class="map" id="map">
 				<div class="background-image map__background-image">
-					<div class="background-image__flex-element">
+					<div class="background-image__flex-element background-image__flex-element_substrape">
 						<img class="map__ img background-image__img" src="img/background/mapBG.jpg" alt="">
 					</div>
 				</div>
@@ -362,7 +365,7 @@
 					<h2 class="map__title title">города</h2>
 					<h3 class="map__subtitle subtitle">По всему миру</h3>
 					<h4 class="map__undertext undertext">Мы в вашем городе и по всему миру</h4>
-					<div class="map__all-cities close__menu">посмотреть все города</div>
+					<div class="map__all-cities close__menu wow animate__animated animate__pulse" data-wow-duration="3s" data-wow-iteration="infinite">посмотреть все города</div>
 				</div>
 			</section>
 		</main>
@@ -381,8 +384,8 @@
 					<div class="footer__flex-element footer__flex-element-centered">
 						<ul class="footer__menu">
 							<li class="footer__menu-item"><a href="#">на главную</a></li>
-							<li class="footer__menu-item"><a href="#">города</a></li>
-							<li class="footer__menu-item"><a href="#">для водителей</a></li>
+							<li class="footer__menu-item"><a href="#map">города</a></li>
+							<li class="footer__menu-item"><a href="#requirement">для водителей</a></li>
 						</ul>
 						<ul class="footer__info">
 							<li class="footer__info-item"><a href="#">центр поддержки</a></li>
@@ -392,7 +395,7 @@
 							<li class="footer__info-item"><a href="#">о нас</a></li>
 						</ul>
 						<div class="footer__language">
-							<a href="#">русский</a>
+							<a href="#">English version </a>
 						</div>
 
 					</div>
@@ -445,17 +448,18 @@
 			</form>
 		</div>
 
-			<div class="overlay">
-				<div class="modal modal_mini" id="thanks">
-					<div class="modal__close">&times;</div>
-					<div class="modal__subtitle">Спасибо за вашу заявку!</div>
-					<div class="modal__descr">Наш менеджер свяжется с вами
-						в ближайшее время!</div>
-				</div>
+		<div class="overlay">
+			<div class="modal modal_mini" id="thanks">
+				<div class="modal__close">&times;</div>
+				<div class="modal__subtitle">Спасибо за вашу заявку!</div>
+				<div class="modal__descr">Наш менеджер свяжется с вами
+					в ближайшее время!</div>
 			</div>
 		</div>
 	</div>
-
+	<div class="arrow-up">
+		<a class="arrow-up__img" href="#"></a>
+	</div>
 	<script src="js/script.min.js"></script>
 </body>
 

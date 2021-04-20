@@ -19,6 +19,7 @@
 	}
 	&__flex-element-shop {
 		display: flex;
+		z-index: 910;
 	}
 
 	&__social {
@@ -117,6 +118,9 @@
 	.footer{
 		&__flex-element-shop{
 			flex-direction: column;
+		}
+		&__flex-element-centered{
+			margin-left: -66px;
 		}
 	}
 }

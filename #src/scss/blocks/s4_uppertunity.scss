@@ -17,8 +17,8 @@
 			bottom: 0;
 			position: absolute;
 			z-index: 10;
-			-webkit-mask: url('../../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
-			mask: url('../../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
+			-webkit-mask: url('../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
+			mask: url('../img/slider/arr-right.svg') 10px 10px/91% 57% no-repeat;
 			background-color: rgba(2, 2, 8, 0.591);
 			transition: all 0.4s;
 		}
@@ -41,8 +41,8 @@
 			bottom: 0;
 			position: absolute;
 			z-index: 10;
-			-webkit-mask: url('../../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
-			mask: url('../../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
+			-webkit-mask: url('../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
+			mask: url('../img/slider/arr-left.svg') 10px 10px/91% 57% no-repeat;
 			background-color: rgba(2, 2, 8, 0.591);
 			transition: all 0.4s;
 		}
