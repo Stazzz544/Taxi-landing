@@ -1,6 +1,11 @@
 @@include('swiper-bundle.min.js');
-@@include('jquery-1.12.4.min.js');
+@@include('jquery-1.11.0.min.js');
+@@include('jquery-migrate-1.2.1.min.js');
+// @@include('jquery-1.12.4.min.js');
 @@include('jquery.tabs.js');
+@@include('jquery.validate.min.js');
+@@include('jquery.maskedinput.min.js');
+
 
 //функция для подключения webp
 function testWebP(callback) {
@@ -53,36 +58,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //modal
 
-window.addEventListener('DOMContentLoaded', () => {
-	const modal = document.querySelector('.overlay');
-	const bodyLock = document.querySelector('body');
+// window.addEventListener('DOMContentLoaded', () => {
+// 	const modal = document.querySelector('.overlay');
+// 	const bodyLock = document.querySelector('body');
 	
-	modalActivator1 = document.querySelector('.modal-activator1');
-	modalActivator2 = document.querySelector('.modal-activator2');
-	modalActivator3 = document.querySelector('.modal-activator3');
-	modalRemover = document.querySelector('.modal__close');
+// 	modalActivator1 = document.querySelector('.modal-activator1');
+// 	modalActivator2 = document.querySelector('.modal-activator2');
+// 	modalActivator3 = document.querySelector('.modal-activator3');
+// 	modalRemover = document.querySelector('.modal__close');
 
 
-	modalActivator1.addEventListener('click', () => {
-		modal.classList.toggle('overlay_active');
-		bodyLock.classList.toggle('lock');
-	}),
-	modalActivator2.addEventListener('click', () => {
-		modal.classList.toggle('overlay_active');
-		bodyLock.classList.toggle('lock');
-	}),
-	modalActivator3.addEventListener('click', () => {
-		modal.classList.toggle('overlay_active');
-		bodyLock.classList.toggle('lock');
-	}),
+// 	modalActivator1.addEventListener('click', () => {
+// 		modal.classList.toggle('overlay_active');
+// 		bodyLock.classList.toggle('lock');
+// 	}),
+// 	modalActivator2.addEventListener('click', () => {
+// 		modal.classList.toggle('overlay_active');
+// 		bodyLock.classList.toggle('lock');
+// 	}),
+// 	modalActivator3.addEventListener('click', () => {
+// 		modal.classList.toggle('overlay_active');
+// 		bodyLock.classList.toggle('lock');
+// 	}),
 
-	modalRemover.addEventListener('click', () => {
-		modal.classList.remove('overlay_active');
-		bodyLock.classList.remove('lock');
-	});
+// 	modalRemover.addEventListener('click', () => {
+// 		modal.classList.remove('overlay_active');
+// 		bodyLock.classList.remove('lock');
+// 	});
 
 
-})
+// })
 
 
 
@@ -124,48 +129,51 @@ var swiperUppertunity = new Swiper('.swiper-container-uppertunity', {
 });
 
 
+
+
+
+
+
+$(document).ready(function(){
+
 //tabs
-$(function () {
-	$('#horizontalTab').jqTabs({ direction: 'horizontal' });
-});
 
-$('input[name=phone]').mask("+7 (999) 999-99-99");
-
-
-
+	$(function () {
+		$('#horizontalTab').jqTabs({ direction: 'horizontal' });
+	});
 
 
 //modal
-$('[data-modal=consultation]').on('click', function(){
-	$('.overlay, #consultation').fadeIn('slow');
-}); 
-$('.modal__close').on('click', function(){
-	$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
-});
+	$('[data-modal=consultation]').on('click', function(){
+		$('.overlay, #consultation').fadeIn('slow');
+	}); 
+	$('.modal__close').on('click', function(){
+		$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+	});
 
-$('.catalog-item__btn').each(function(i) {
-	$(this).on('click', function() {
-		$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-		$('.overlay, #order').fadeIn('slow');
+	$('.catalog-item__btn').each(function(i) {
+		$(this).on('click', function() {
+			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+			$('.overlay, #order').fadeIn('slow');
+		})
 	})
-})
 
 
+	$('input[name=phone]').mask("+7 (999) 999-99-99");
 
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			 type: "POST",
+			 url: "mailer/smart.php",
+			 data: $(this).serialize()
+		}).done(function() {
+			 $(this).find("input").val("");
+			 $('#consultation, #order').fadeOut();
+			 $('.overlay, #thanks').fadeIn('slow');
 
-//mail
-$('form').submit(function(e) {
-	 e.preventDefault();
-	 $.ajax({
-		  type: "POST",
-		  url: "mailer/smart.php",
-		  data: $(this).serialize()
-	 }).done(function() {
-		  $(this).find("input").val("");
-		  $('#consultation, #order').fadeOut();
-		  $('.overlay, #thanks').fadeIn('slow');
-
-		  $('form').trigger('reset');
-	 });
-	 return false;
+			 $('form').trigger('reset');
+		});
+		return false;
+  });
 });

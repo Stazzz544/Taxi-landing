@@ -224,70 +224,9 @@ body.lock {
 
 //mail modal
 
-.overlay {
-	;
-	position       : fixed;
-	top            : 0;
-	left           : 0;
-	bottom         : 0;
-	right          : 0;
-	background     : #000000ad;
-	z-index        : 10000;
-	display        : none; //!
-	justify-content: center;
-	align-items    : center;
 
-	&_active {
-		display: flex;
-	}
-}
 
-.modal {
-	padding      : 30px;
-	width        : 310px;
-	height       : 400px;
-	background   : $main-color;
-	position     : relative;
-	border-radius: 10px;
-	&-send-success{
-		height: 110px;
-		padding-top: 45px;
-	}
 
-	&__close {
-		position : absolute;
-		color    : #ffffff;
-		font-size: 52px;
-		top      : -3px;
-		right    : 13px;
-
-	}
-
-	&__subtitle {
-		font-size : 25px;
-		color     : #ffffff;
-		text-align: center;
-	}
-
-	&__descr {
-		margin-top: 25px;
-		font-size : 15px;
-		color     : #ffffff;
-	}
-}
-
-.feed-form {
-	input {
-		width        : 100%;
-		margin-top   : 20px;
-		padding      : 9px 16px;
-		border-radius: 15px;
-
-		&:first-child {
-			margin-top: 40px;
-		}
-	}
-}
 
 .button {
 	&_submit {
@@ -298,12 +237,6 @@ body.lock {
 
 	}
 }
-
-
-
-
-
-
 
 
 @media(max-width:900px) {
